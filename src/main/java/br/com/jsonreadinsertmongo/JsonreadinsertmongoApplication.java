@@ -22,7 +22,7 @@ public class JsonreadinsertmongoApplication {
 	}
 
 	@Bean
-	CommandLineRunner runner(UserService userService){
+	public static CommandLineRunner runner(UserService userService){
 		return args -> {
 			ObjectMapper mapper = new ObjectMapper();
 			TypeReference<List<User>> typeReference = new TypeReference<List<User>>() {};
