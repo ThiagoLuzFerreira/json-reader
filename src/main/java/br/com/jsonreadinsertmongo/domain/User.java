@@ -4,16 +4,15 @@ package br.com.jsonreadinsertmongo.domain;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import org.springframework.data.mongodb.core.mapping.Document;
 
 @Data
 @AllArgsConstructor
-@Entity
-@Table(name = "users_json")
+@Document(collection = "user_any")
 public class User {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
+    private String id;
     private String name;
     private String username;
     private String email;
