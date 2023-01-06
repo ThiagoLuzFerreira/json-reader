@@ -5,10 +5,12 @@ import jakarta.persistence.Embedded;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 
+import java.io.Serializable;
+
 @Data
 @AllArgsConstructor
 @Embeddable
-public class Address {
+public class Address implements Serializable {
 
     private String street;
     private String suite;
