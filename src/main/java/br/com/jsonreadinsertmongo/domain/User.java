@@ -7,6 +7,8 @@ import lombok.Data;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.io.Serializable;
+import java.util.List;
+import java.util.Map;
 
 @Data
 @AllArgsConstructor
@@ -22,9 +24,9 @@ public class User implements Serializable {
     private String website;
 
     @Embedded
-    private Address address;
+    private List<Map<String, Object>> address;
     @Embedded
-    private Company company;
+    private Map<String, Object> company;
 
     public User() {
     }
