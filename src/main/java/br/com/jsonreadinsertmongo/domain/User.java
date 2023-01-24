@@ -1,11 +1,13 @@
 package br.com.jsonreadinsertmongo.domain;
 
 
-import jakarta.persistence.*;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import javax.persistence.Embedded;
+import javax.persistence.Id;
 import java.io.Serializable;
 import java.util.List;
 import java.util.Map;
@@ -24,7 +26,7 @@ public class User implements Serializable {
     private String website;
 
     @Embedded
-    private List<Map<String, Object>> address;
+    private Map<String, Object> address;
     @Embedded
     private Map<String, Object> company;
 
